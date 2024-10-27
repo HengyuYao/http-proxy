@@ -21,6 +21,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/website/**', function(req, res, next) {
   res.sendFile( path.join(__dirname, '/public/website') + "/" + "index.html" )
 });
+
+app.get('/views/**', function(req, res, next) {
+  res.sendFile( path.join(__dirname, '/public/views') + "/" + "index.html" )
+});
 // app.get(/.*/,function(req,res){
 //   res.sendFile(__dirname+'../public/')})
 
